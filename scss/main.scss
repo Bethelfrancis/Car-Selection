@@ -1,0 +1,111 @@
+@import './reset';
+@import './variables';
+
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+};
+
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content 
+    };
+}
+
+body {
+    background-color: $other-color;
+    color: $second-color;
+    text-align: center
+}
+
+.container {
+    @include flexCenter(column);
+    padding: 30px;
+}
+
+.filter {
+    @include flexCenter(row);
+    margin-bottom: 100px;
+
+    .options-label {
+        font-size: map-get($font-size, large);
+        word-wrap: break-word;
+    }
+
+    #cars {
+        font-size: map-get($font-size, normal);
+    }
+
+    #cars {
+        height: 28px;
+    }
+
+    @include mobile {
+        @include flexCenter(column);
+        gap: 20px;
+    }
+}
+
+.cards {
+    @include flexCenter(row);
+    gap: 100px;
+    flex-wrap: wrap;
+
+    .car-card {
+        background-color: $second-color;
+        color: $other-color;
+        width: 400px;
+        border-radius: 10px;
+        padding-bottom: 20px;
+
+        #car-img {
+            border-radius: 10px;
+            width: 400px;
+            height: 200px;
+
+            @include mobile {
+                width: 330px;
+            }
+        }
+
+        @include mobile {
+            width: 330px;
+        }
+    }
+
+    .car-con {
+        @include flexCenter(column);
+        text-align: center;
+        gap: 20px;
+
+        #car-logo {
+            border-radius: 100%;
+        }
+
+        h1 {
+            font-size: map-get($font-size, medium);
+            font-weight: map-get($font-weight, large);
+
+            span {
+                font-weight: map-get($font-weight, medium);
+            }
+        }
+
+        button {
+            background: $other-color;
+            color: $second-color;
+            font-size: map-get($font-size, medium);
+            border-radius: 5px;
+            border: none;
+            padding: 10px 16px;
+            cursor: pointer;
+
+            &:hover {
+                background: $main-color;
+            }
+        }
+    }
+    
+}

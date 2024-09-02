@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #03002b;
+  color: #ffffff;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 100px;
+}
+.filter .options-label {
+  font-size: 42px;
+  word-wrap: break-word;
+}
+.filter #cars {
+  font-size: 18px;
+}
+.filter #cars {
+  height: 28px;
+}
+@media (max-width: 500px) {
+  .filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 100px;
+  flex-wrap: wrap;
+}
+.cards .car-card {
+  background-color: #ffffff;
+  color: #03002b;
+  width: 400px;
+  border-radius: 10px;
+  padding-bottom: 20px;
+}
+.cards .car-card #car-img {
+  border-radius: 10px;
+  width: 400px;
+  height: 200px;
+}
+@media (max-width: 500px) {
+  .cards .car-card #car-img {
+    width: 330px;
+  }
+}
+@media (max-width: 500px) {
+  .cards .car-card {
+    width: 330px;
+  }
+}
+.cards .car-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+}
+.cards .car-con #car-logo {
+  border-radius: 100%;
+}
+.cards .car-con h1 {
+  font-size: 25px;
+  font-weight: 700;
+}
+.cards .car-con h1 span {
+  font-weight: 500;
+}
+.cards .car-con button {
+  background: #03002b;
+  color: #ffffff;
+  font-size: 25px;
+  border-radius: 5px;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+.cards .car-con button:hover {
+  background: #044fb0;
+}/*# sourceMappingURL=main.css.map */
