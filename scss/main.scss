@@ -56,22 +56,15 @@ body {
     .car-card {
         background-color: $second-color;
         color: $other-color;
-        width: 400px;
+        width: 100%;
+        max-width: 400px;
         border-radius: 10px;
         padding-bottom: 20px;
 
         #car-img {
             border-radius: 10px;
-            width: 400px;
-            height: 200px;
-
-            @include mobile {
-                width: 330px;
-            }
-        }
-
-        @include mobile {
-            width: 330px;
+            width: 100%;
+            height: 230px;
         }
     }
 
